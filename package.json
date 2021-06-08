@@ -15,6 +15,7 @@
   "devDependencies": {
     "autoprefixer": "^10.0.4",
     "postcss": "^8.1.10",
+    "stylelint-config-recommended": "^5.0.0",
     "tailwindcss": "^2.1.1"
   }
 }
