@@ -23,7 +23,6 @@ const ListIdeas = ({ list }) => {
     }
 
     const sortHighestvotesFirst = () => {
-        
         const sortList = [...list].sort((a, b) => b.votes - a.votes);
         setLocalList(sortList);
     }

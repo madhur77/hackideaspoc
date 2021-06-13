@@ -3,7 +3,7 @@ import { useState } from "react";
 import Button from "../Button/Button"
 import { parseCookies, setCookie, destroyCookie } from 'nookies'
 interface IList  {
-    id: number;
+    id: string;
     idea: string;
     description: string;
     votes: number;
@@ -33,7 +33,10 @@ const Idea = ({ id, idea, description , votes,tags}: IList) => {
 
 
     return (<div>
-            <div className="bg-green-800 text-white  inline-block text-center p-2 m-2 ">{idea} => {description}</div>
+        <div
+            className="bg-green-800 text-white  inline-block text-center p-2 m-2"
+            data-testid='idea'
+        >{idea} => {description}</div>
         <div className=' mx-4 inline-block'>
             <Button blabel="vote up" clickHandler={upVote} id={id} votes={tvotes} /></div>
         <div className="bg-red-500 text-white p-2">{ tags}</div>
