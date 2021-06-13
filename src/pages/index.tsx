@@ -21,7 +21,7 @@ const Home = ({listofideas,username}) => {
 
 
 
-export const getServerSideProps = async(ctx) => {
+export const getServerSideProps = async(ctx:object) => {
 	const cookies = nookies.get(ctx)
 
 	const listofideas = await axios.get("http://localhost:3000/api/getideas");
