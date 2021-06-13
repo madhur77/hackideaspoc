@@ -1,15 +1,18 @@
 interface TButton {
+    id?: string;
     blabel: string;
     clickHandler: () => void;
+    votes?: number;
 }
 
-const Button = ({ blabel, clickHandler} : TButton) => {
+const Button = ({ id, blabel, clickHandler, votes} : TButton) => {
     
-    return (<button
+    return (<div><button
+        id={id}
         type="button"
-        className='border-2 border-purple-500'
-        onClick={ clickHandler}
-    >{blabel}</button>);
+        className='border-2 border-purple-500 px-2 rounded-xl'
+        onClick={clickHandler}
+    >{blabel} </button> {votes ? ' votes so far='+votes : ''}</div>);
 
 }
 

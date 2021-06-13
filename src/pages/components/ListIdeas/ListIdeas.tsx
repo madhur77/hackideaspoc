@@ -4,9 +4,11 @@ import { useState } from "react";
 
 interface IListItem {
     
-    id: string;
+    id: number;
     title: string;
     description: string;
+    votes: number;
+    tags: string;
 
 }
 
@@ -15,14 +17,29 @@ const ListIdeas = ({ list }) => {
 
     // sorting by the latest of the epoch
     const sortNewFirst = () => {
-        list.sort((a, b) => a.epoch - b.epoch);
-        setLocalList(list);
+        const sortList = [...list].sort((a, b) => b.epoch - a.epoch);
+        setLocalList(sortList);
      
     }
-    return (<div>
-        <Filter filter="Newest first" handler={sortNewFirst}/>
+
+    const sortHighestvotesFirst = () => {
         
-        {locallist.map(idea => <Idea key={idea.id} idea={idea.title} description={ idea.description}/>)}
+        const sortList = [...list].sort((a, b) => b.votes - a.votes);
+        setLocalList(sortList);
+    }
+
+
+    return (<div>
+        <Filter filter="Sort newest first" handler={sortNewFirst} />
+        <Filter filter="Highest votes first" handler={sortHighestvotesFirst} />
+        {locallist.map(idea => <Idea
+            key={idea.id}
+            id={idea.id}
+            idea={idea.title}
+            description={idea.description}
+            votes={idea.votes}
+            tags={ idea.tags}
+        />)}
     </div>);
     
 };
