@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { getAllByTestId, screen } from "@testing-library/dom";
-import ListIdeas from "../../../src/pages/components/ListIdeas/ListIdeas";
+import { screen } from "@testing-library/dom";
+import ListIdeas from "../../../src/components/ListIdeas/ListIdeas";
 
 const mocklist = [
 	{
