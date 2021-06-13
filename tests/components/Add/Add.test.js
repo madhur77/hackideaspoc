@@ -22,4 +22,8 @@ describe("Add Idea component", () => {
 		const cb = screen.getAllByTestId("cb");
 		expect(cb).toBeDefined();
 	});
+	it("checkboxes are displayed and unchecked", () => {
+		const cb = screen.getAllByTestId("cb");
+		expect(cb).toBeDefined();
+	});
 });
