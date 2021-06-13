@@ -1,7 +1,7 @@
 interface TButton {
     id?: string;
     blabel: string;
-    clickHandler: () => void;
+    clickHandler?: (any) => Promise<void> ;
     votes?: number;
 }
 

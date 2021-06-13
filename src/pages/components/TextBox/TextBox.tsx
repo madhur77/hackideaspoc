@@ -1,6 +1,6 @@
 interface ITitle  {
     placeholder: string;
-    changeHandler : ( string) => void;
+    changeHandler? : ( string) => void;
 }
 
 const TextBox = ({ placeholder , changeHandler}:ITitle) => {

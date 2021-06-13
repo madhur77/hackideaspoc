@@ -21,6 +21,7 @@ const AddIdeas = () => {
 
         }
         else {
+            //@ts-ignore
             tags.pop(tag);
             console.log(tags);
         }
