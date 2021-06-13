@@ -4,7 +4,7 @@ import { screen } from "@testing-library/dom";
 import axios from "axios";
 import { mocked } from "ts-jest/utils";
 import { getServerSideProps } from "../src/pages/index";
-jest.mock("../src/pages/components/Add/AddIdeas", () => {
+jest.mock("../src/components/Add/AddIdeas", () => {
 	return {
 		__esModule: true,
 		// eslint-disable-next-line react/display-name
@@ -14,7 +14,7 @@ jest.mock("../src/pages/components/Add/AddIdeas", () => {
 	};
 });
 
-jest.mock("../src/pages/components/ListIdeas/ListIdeas", () => {
+jest.mock("../src/components/ListIdeas/ListIdeas", () => {
 	return {
 		__esModule: true,
 		// eslint-disable-next-line react/display-name
