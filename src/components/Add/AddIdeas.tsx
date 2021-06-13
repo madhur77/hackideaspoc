@@ -2,7 +2,7 @@ import { useState } from 'react';
 import TextBox from "../TextBox/TextBox";
 import Button from "../Button/Button";
 import axios from "axios";
-import TagList from '../Taglist/TagList';
+import TagList from '../TagList/TagList';
 
 const AddIdeas = () => {
     const [ title, setTitle ] = useState<string>(undefined);

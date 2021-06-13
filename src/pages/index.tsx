@@ -1,6 +1,6 @@
 import axios from "axios";
-import AddIdeas from "./components/Add/AddIdeas";
-import ListIdeas from "./components/ListIdeas/ListIdeas";
+import AddIdeas from "../components/Add/AddIdeas";
+import ListIdeas from "../components/ListIdeas/ListIdeas";
 import nookies from 'nookies';
 
 

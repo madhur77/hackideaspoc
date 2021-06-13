@@ -4,7 +4,7 @@ import { useState } from "react";
 
 interface IListItem {
     
-    id: number;
+    id: string;
     title: string;
     description: string;
     votes: number;

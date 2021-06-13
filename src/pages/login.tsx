@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Button from "./components/Button/Button"
-import TextBox from "./components/TextBox/TextBox"
+import Button from "../components/Button/Button"
+import TextBox from "../components/TextBox/TextBox"
 import { setCookie } from 'nookies';
 import router from 'next/router';
 
