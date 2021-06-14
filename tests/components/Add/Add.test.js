@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import { screen } from "@testing-library/dom";
-import AddIdeas from "../../../src/pages/components/Add/AddIdeas";
+import AddIdeas from "../../../src/components/Add/AddIdeas";
 
 describe("Add Idea component", () => {
 	beforeEach(() => {
