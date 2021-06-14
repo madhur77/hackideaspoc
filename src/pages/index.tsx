@@ -21,10 +21,10 @@ const Home = ({listofideas,username}) => {
 
 
 
-export const getServerSideProps = async(ctx:object) => {
-	const cookies = nookies.get(ctx)
-
-	const listofideas = await axios.get("http://localhost:3000/api/getideas");
+export const getServerSideProps = async(ctx) => {
+	const cookies = nookies.get(ctx);
+	
+	const listofideas = await axios.get(process.env.BASE_URL+"/api/getideas");
 	return {
 		props: {
 			listofideas: listofideas.data,
